@@ -21,10 +21,14 @@ class AILoginViewController: AIBaseViewController {
     @IBOutlet weak var loginBtnContainer: UIView!
     @IBOutlet weak var touchIdBtnContainer: UIView!
     @IBOutlet weak var loginViewTopConstraint: NSLayoutConstraint!
-    
+    let userKeychainWrapper = KeychainWrapper()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLoginView()
+        if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
+            invokeTouchIDWithUsername(savedUsername as! String)
+        }
     }
     
     
@@ -39,31 +43,66 @@ class AILoginViewController: AIBaseViewController {
     }
     
     @IBAction func loginTapped(sender: UIButton) {
-        resignKeyboard()
-        if username.text?.characters.count > 0 && username.text?.characters.count > 0 {
+        if validateLoginFields() {
             pushToDashboard()
         }
     }
     
     @IBAction func loginWithTouchIdTapped(sender: UIButton) {
-        resignKeyboard()
-        
+        if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
+            invokeTouchIDWithUsername(savedUsername as! String)
+        }
+        else {
+            if validateLoginFields() {
+                saveUserCredentials()
+            }
+        }
     }
    
-    
-    func resignKeyboard() {
+    func validateLoginFields() -> Bool {
         view.endEditing(true)
+        if username.text?.characters.count > 0 && username.text?.characters.count > 0 {
+            return true
+        }
+        return false
     }
     
     func pushToDashboard() {
         
     }
+    
+    //MARK: TouchID Implementation
+    
+    func saveUserCredentials() {
+        NSUserDefaults.standardUserDefaults().setValue(username.text, forKey: Constants.touchID.kUsername)
+        userKeychainWrapper.mySetObject(password.text, forKey: kSecValueData)
+        userKeychainWrapper.writeToKeychain()
+    }
+    
+    func invokeTouchIDWithUsername(savedUsername : String) {
+        view.endEditing(true)
+        AILoginManager.evaluateTouchIDAuthentication({ (success, authError) -> Void in
+            
+            if authError != nil {
+                return
+            }
+            else if (success != nil) {
+                self.username.text = savedUsername as String
+                self.password.text = self.userKeychainWrapper.myObjectForKey("v_Data") as? String
+                self.pushToDashboard()
+            }
+            
+        })
+        
+    }
 }
+
+    //MARK: UITextFieldDelegate
 
 extension AILoginViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        resignKeyboard()
+        view.endEditing(true)
         return true
     }
     
