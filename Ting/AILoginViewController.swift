@@ -31,7 +31,6 @@ class AILoginViewController: AIBaseViewController {
         }
     }
     
-    
     func setUpLoginView() {
         view.backgroundColor = UIColor.blackColor()
         
@@ -41,6 +40,20 @@ class AILoginViewController: AIBaseViewController {
         touchIdBtnContainer.layer.borderWidth = 1
         touchIdBtnContainer.layer.borderColor = UIColor.tingGrayColor(0.3).CGColor
     }
+    
+    func validateLoginFields() -> Bool {
+        view.endEditing(true)
+        if username.text?.characters.count > 0 && username.text?.characters.count > 0 {
+            return true
+        }
+        return false
+    }
+    
+    func pushToDashboard() {
+        
+    }
+    
+    //MARK: IBAction 
     
     @IBAction func loginTapped(sender: UIButton) {
         if validateLoginFields() {
@@ -57,18 +70,6 @@ class AILoginViewController: AIBaseViewController {
                 saveUserCredentials()
             }
         }
-    }
-   
-    func validateLoginFields() -> Bool {
-        view.endEditing(true)
-        if username.text?.characters.count > 0 && username.text?.characters.count > 0 {
-            return true
-        }
-        return false
-    }
-    
-    func pushToDashboard() {
-        
     }
     
     //MARK: TouchID Implementation

@@ -12,6 +12,7 @@
 		4E3158F51BA5DAA6006987B9 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158F41BA5DAA6006987B9 /* KeychainWrapper.m */; };
 		4E3158FB1BA5DB23006987B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FA1BA5DB23006987B9 /* Constants.swift */; };
 		4E3158FD1BA5E6FF006987B9 /* AILoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FC1BA5E6FF006987B9 /* AILoginManager.swift */; };
+		4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FE1BA5ED64006987B9 /* AIFont.swift */; };
 		4E9B0C1C1BA57D03004A1627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1B1BA57D03004A1627 /* AppDelegate.swift */; };
 		4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1F1BA57D03004A1627 /* Main.storyboard */; };
 		4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 		4E3158F41BA5DAA6006987B9 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		4E3158FA1BA5DB23006987B9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E3158FC1BA5E6FF006987B9 /* AILoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AILoginManager.swift; sourceTree = "<group>"; };
+		4E3158FE1BA5ED64006987B9 /* AIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIFont.swift; sourceTree = "<group>"; };
 		4E9B0C181BA57D03004A1627 /* Ting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9B0C1B1BA57D03004A1627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9B0C201BA57D03004A1627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				4EFCA1211BA581320021314E /* AIColor.swift */,
 				4E3158FA1BA5DB23006987B9 /* Constants.swift */,
+				4E3158FE1BA5ED64006987B9 /* AIFont.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */,
 				4E3158F11BA59861006987B9 /* AIBaseViewController.swift in Sources */,
 				4E3158EF1BA58F43006987B9 /* AILoginViewController.swift in Sources */,
 				4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */,
