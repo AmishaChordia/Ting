@@ -1040,9 +1040,13 @@ e.g. "Change my pin"</string>
                                             <constraint firstItem="AgI-mU-rhw" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" id="Ajv-K9-0Yo"/>
                                             <constraint firstItem="8OR-P9-1Xk" firstAttribute="top" secondItem="zOW-gc-Jwn" secondAttribute="top" constant="10" id="BFt-3j-RaS"/>
                                             <constraint firstItem="AgI-mU-rhw" firstAttribute="top" secondItem="qjb-O7-W9x" secondAttribute="bottom" constant="15" id="Hup-8J-wJs"/>
-                                            <constraint firstItem="gnO-9d-36c" firstAttribute="top" secondItem="cfm-cX-cEe" secondAttribute="bottom" constant="23" id="MPm-FM-Adp"/>
+                                            <constraint firstItem="gnO-9d-36c" firstAttribute="top" secondItem="cfm-cX-cEe" secondAttribute="bottom" constant="23" id="MPm-FM-Adp">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="qjb-O7-W9x" secondAttribute="trailing" constant="15" id="RA4-mh-cXy"/>
-                                            <constraint firstAttribute="bottom" secondItem="gnO-9d-36c" secondAttribute="bottom" constant="30" id="TgK-Xi-xrp"/>
+                                            <constraint firstAttribute="bottom" secondItem="gnO-9d-36c" secondAttribute="bottom" constant="30" id="TgK-Xi-xrp">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                             <constraint firstItem="qjb-O7-W9x" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" constant="15" id="Wxl-N3-cvQ"/>
                                             <constraint firstAttribute="trailing" secondItem="8OR-P9-1Xk" secondAttribute="trailing" constant="15" id="XwW-0w-L5l"/>
                                             <constraint firstAttribute="trailing" secondItem="AgI-mU-rhw" secondAttribute="trailing" id="c1c-HY-cBL"/>
@@ -1185,7 +1189,10 @@ e.g. "Change my pin"</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="amountSpentMonthlyLabel" destination="TiE-5f-WqO" id="AdA-0u-wFJ"/>
+                        <outlet property="lastTransactionLabel" destination="nSv-Vd-BBb" id="Rgp-rK-Vlj"/>
                         <outlet property="micButtonView" destination="gnO-9d-36c" id="HOd-qA-2R9"/>
+                        <outlet property="totalBalanceLabel" destination="Byr-LF-hVX" id="uI8-21-Umt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SkC-BY-x0s" userLabel="First Responder" sceneMemberID="firstResponder"/>

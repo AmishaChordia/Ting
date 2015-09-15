@@ -11,9 +11,38 @@ import UIKit
 let micSize : CGFloat = 50
 
 class AIDashboardViewController: AIBaseViewController, WitDelegate {
+   
+    // MARK: - Properties
     
     var userIntent : AIIntentModel?
     @IBOutlet weak var micButtonView: UIView!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
+    
+    @IBOutlet weak var lastTransactionLabel: UILabel!
+    @IBOutlet weak var amountSpentMonthlyLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpView()
+    }
+
+    // MARK: - ViewSetup
+    
+    func setUpView() {
+        userIntent = nil
+        Wit.sharedInstance().delegate = self
+        
+        totalBalanceLabel.attributedText = createAmountString("₹ 2,40,000")
+        lastTransactionLabel.attributedText = createAmountString("₹ 29,550")
+        amountSpentMonthlyLabel.attributedText = createAmountString("₹ 45,000")
+        addWITButton()
+    }
+    
+    func addWITButton() {
+        let button : WITMicButton = WITMicButton(frame: CGRectMake(0, 0, micSize, micSize))
+        micButtonView.addSubview(button)
+    }
+    
+    // MARK: - Utility mathods
     
     static func createDashboardVCInstance() -> AIDashboardViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -21,20 +50,10 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
         return dashboardViewController
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpView()
-    }
-
-    func setUpView() {
-        userIntent = nil
-        Wit.sharedInstance().delegate = self
-        addWITButton()
-    }
-    
-    func addWITButton() {
-        let button : WITMicButton = WITMicButton(frame: CGRectMake(0, 0, micSize, micSize))
-        micButtonView.addSubview(button)
+    func createAmountString(moneyString : String) -> NSAttributedString {
+        let attributedAmount : NSMutableAttributedString = NSMutableAttributedString(string: moneyString)
+        attributedAmount.addAttribute(NSFontAttributeName , value:  UIFont.tingHelveticaMediumWithSize(25.0), range: NSMakeRange(0, 1))
+        return attributedAmount
     }
     
     // MARK: - Wit Delegate
@@ -51,7 +70,6 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
                     print(userIntent?.intent)
                     print(userIntent?.entity)
                     print(userIntent?.confidence)
-
                 }
             }
         }
