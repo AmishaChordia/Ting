@@ -18,6 +18,7 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
     @IBOutlet weak var micButtonView: UIView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
     
+    @IBOutlet weak var navigatnBar: UINavigationBar!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var amountSpentMonthlyLabel: UILabel!
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
         userIntent = nil
         Wit.sharedInstance().delegate = self
         
+        navigatnBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.tingHelveticaRegularWithSize(14)]
         totalBalanceLabel.attributedText = createAmountString("₹ 2,40,000")
         lastTransactionLabel.attributedText = createAmountString("₹ 29,550")
         amountSpentMonthlyLabel.attributedText = createAmountString("₹ 45,000")
