@@ -9,36 +9,22 @@
 import UIKit
 
 let animationDuration = 0.4
-let loginViewTopConstraintDefault = 151
-let loginViewTopConstraintWhileEditing = 40
+let loginViewTopConstraintDefault = 205
 
 
 class AILoginViewController: AIBaseViewController {
     
     
+    @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var loginBtnContainer: UIView!
-    @IBOutlet weak var touchIdBtnContainer: UIView!
-    @IBOutlet weak var loginViewTopConstraint: NSLayoutConstraint!
     let userKeychainWrapper = KeychainWrapper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpLoginView()
         if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
             invokeTouchIDWithUsername(savedUsername as! String)
         }
-    }
-    
-    func setUpLoginView() {
-        view.backgroundColor = UIColor.blackColor()
-        
-        loginBtnContainer.layer.borderWidth = 1
-        loginBtnContainer.layer.borderColor = UIColor.tingGrayColor(0.3).CGColor
-        
-        touchIdBtnContainer.layer.borderWidth = 1
-        touchIdBtnContainer.layer.borderColor = UIColor.tingGrayColor(0.3).CGColor
     }
     
     func validateLoginFields() -> Bool {
@@ -108,8 +94,8 @@ extension AILoginViewController : UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if loginViewTopConstraint.constant == CGFloat(loginViewTopConstraintDefault) {
-            self.loginViewTopConstraint.constant = CGFloat(loginViewTopConstraintWhileEditing)
+        if logoTopConstraint.constant == 0 {
+            self.logoTopConstraint.constant = CGFloat(-loginViewTopConstraintDefault)
             UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
                 self.view.layoutIfNeeded()
                 }) { (finished) -> Void in
@@ -118,8 +104,8 @@ extension AILoginViewController : UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if loginViewTopConstraint.constant != CGFloat(loginViewTopConstraintDefault)  {
-            self.loginViewTopConstraint.constant = CGFloat(loginViewTopConstraintDefault)
+        if logoTopConstraint.constant < 0  {
+            self.logoTopConstraint.constant = 0
             UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 self.view.layoutIfNeeded()
                 }) { (finished) -> Void in

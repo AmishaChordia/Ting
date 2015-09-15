@@ -17,7 +17,7 @@ class AIBaseViewController: UIViewController {
     }
     
     func setUpViewProperties() {
-        view.backgroundColor = UIColor.tingBackgroundColor()
+        view.backgroundColor = UIColor.tingBrandBlueColor()
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
