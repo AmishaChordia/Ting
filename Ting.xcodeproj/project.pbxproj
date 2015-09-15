@@ -16,6 +16,8 @@
 		4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FE1BA5ED64006987B9 /* AIFont.swift */; };
 		4E8B245A1BA814E700365F6E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8B24591BA814E700365F6E /* logo.png */; };
 		4E8B245C1BA814EE00365F6E /* bulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8B245B1BA814EE00365F6E /* bulb.png */; };
+		4E8B24611BA81D6D00365F6E /* AIDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B24601BA81D6D00365F6E /* AIDashboardViewController.swift */; };
+		4E8B24641BA82B1300365F6E /* AIIntentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B24631BA82B1300365F6E /* AIIntentModel.swift */; };
 		4E9B0C1C1BA57D03004A1627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1B1BA57D03004A1627 /* AppDelegate.swift */; };
 		4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1F1BA57D03004A1627 /* Main.storyboard */; };
 		4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */; };
@@ -34,6 +36,8 @@
 		4E3158FE1BA5ED64006987B9 /* AIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIFont.swift; sourceTree = "<group>"; };
 		4E8B24591BA814E700365F6E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4E8B245B1BA814EE00365F6E /* bulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulb.png; sourceTree = "<group>"; };
+		4E8B24601BA81D6D00365F6E /* AIDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIDashboardViewController.swift; sourceTree = "<group>"; };
+		4E8B24631BA82B1300365F6E /* AIIntentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIIntentModel.swift; sourceTree = "<group>"; };
 		4E9B0C181BA57D03004A1627 /* Ting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9B0C1B1BA57D03004A1627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9B0C201BA57D03004A1627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			children = (
 				4E3158F01BA59861006987B9 /* AIBaseViewController.swift */,
 				4E9B0C1F1BA57D03004A1627 /* Main.storyboard */,
+				4E8B245D1BA81C3800365F6E /* DashBoard */,
 				4E3158F71BA5DAB9006987B9 /* Login */,
 			);
 			name = Interface;
@@ -72,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				4E3158EE1BA58F43006987B9 /* AILoginViewController.swift */,
-				4E3158F31BA5DAA6006987B9 /* KeychainWrapper.h */,
-				4E3158F41BA5DAA6006987B9 /* KeychainWrapper.m */,
 				4E3158FC1BA5E6FF006987B9 /* AILoginManager.swift */,
 			);
 			name = Login;
@@ -82,8 +85,26 @@
 		4E8B24541BA8067F00365F6E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4E8B245B1BA814EE00365F6E /* bulb.png */,
+				4E8B24591BA814E700365F6E /* logo.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		4E8B245D1BA81C3800365F6E /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4E8B24601BA81D6D00365F6E /* AIDashboardViewController.swift */,
+			);
+			name = DashBoard;
+			sourceTree = "<group>";
+		};
+		4E8B24621BA82ADB00365F6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E8B24631BA82B1300365F6E /* AIIntentModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		4E9B0C0F1BA57D03004A1627 = {
@@ -107,14 +128,13 @@
 		4E9B0C1A1BA57D03004A1627 /* Ting */ = {
 			isa = PBXGroup;
 			children = (
-				4E8B245B1BA814EE00365F6E /* bulb.png */,
-				4E8B24591BA814E700365F6E /* logo.png */,
 				4E8B24541BA8067F00365F6E /* Assets */,
 				4E9B0C1B1BA57D03004A1627 /* AppDelegate.swift */,
 				4E3158F21BA5DAA6006987B9 /* Ting-Bridging-Header.h */,
 				4E9B0C2A1BA57D03004A1627 /* Info.plist */,
 				4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */,
 				4E3158F61BA5DAAF006987B9 /* Interface */,
+				4E8B24621BA82ADB00365F6E /* Model */,
 				4EFCA11A1BA57E950021314E /* Utilities */,
 				4E9B0C251BA57D03004A1627 /* Assets.xcassets */,
 			);
@@ -124,6 +144,8 @@
 		4EFCA11A1BA57E950021314E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4E3158F31BA5DAA6006987B9 /* KeychainWrapper.h */,
+				4E3158F41BA5DAA6006987B9 /* KeychainWrapper.m */,
 				4EFCA1211BA581320021314E /* AIColor.swift */,
 				4E3158FA1BA5DB23006987B9 /* Constants.swift */,
 				4E3158FE1BA5ED64006987B9 /* AIFont.swift */,
@@ -260,8 +282,10 @@
 				4E3158EF1BA58F43006987B9 /* AILoginViewController.swift in Sources */,
 				4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */,
 				4E3158F51BA5DAA6006987B9 /* KeychainWrapper.m in Sources */,
+				4E8B24611BA81D6D00365F6E /* AIDashboardViewController.swift in Sources */,
 				4E3158FB1BA5DB23006987B9 /* Constants.swift in Sources */,
 				4E3158FD1BA5E6FF006987B9 /* AILoginManager.swift in Sources */,
+				4E8B24641BA82B1300365F6E /* AIIntentModel.swift in Sources */,
 				4E9B0C1C1BA57D03004A1627 /* AppDelegate.swift in Sources */,
 				4EFCA1221BA581320021314E /* AIColor.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import UIKit
 
 let animationDuration = 0.4
 let loginViewTopConstraintDefault = 205
-
+let lessThanIP6Width = 320
 
 class AILoginViewController: AIBaseViewController {
     
@@ -19,7 +19,7 @@ class AILoginViewController: AIBaseViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    let isLessThanIP6 = UIScreen.mainScreen().bounds.width <= 320
+    let isLessThanIP6 = UIScreen.mainScreen().bounds.width <= CGFloat(lessThanIP6Width)
     
     let userKeychainWrapper = KeychainWrapper()
     
@@ -39,7 +39,8 @@ class AILoginViewController: AIBaseViewController {
     }
     
     func pushToDashboard() {
-        
+        let dashboard = AIDashboardViewController.createDashboardVCInstance()
+        navigationController?.pushViewController(dashboard, animated: true)
     }
     
     //MARK: IBAction
@@ -77,13 +78,13 @@ class AILoginViewController: AIBaseViewController {
                 return
             }
             else if (success != nil) {
-                self.username.text = savedUsername as String
-                self.password.text = self.userKeychainWrapper.myObjectForKey("v_Data") as? String
-                self.pushToDashboard()
+                dispatch_after(0, dispatch_get_main_queue(), { () -> Void in
+                    self.username.text = savedUsername as String
+                    self.password.text = self.userKeychainWrapper.myObjectForKey("v_Data") as? String
+                    self.pushToDashboard()
+                })
             }
-            
         })
-        
     }
 }
 
