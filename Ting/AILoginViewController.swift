@@ -18,8 +18,11 @@ class AILoginViewController: AIBaseViewController {
     @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    
+    let isLessThanIP6 = UIScreen.mainScreen().bounds.width <= 320
+    
     let userKeychainWrapper = KeychainWrapper()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
@@ -39,7 +42,7 @@ class AILoginViewController: AIBaseViewController {
         
     }
     
-    //MARK: IBAction 
+    //MARK: IBAction
     
     @IBAction func loginTapped(sender: UIButton) {
         if validateLoginFields() {
@@ -84,7 +87,7 @@ class AILoginViewController: AIBaseViewController {
     }
 }
 
-    //MARK: UITextFieldDelegate
+//MARK: UITextFieldDelegate
 
 extension AILoginViewController : UITextFieldDelegate {
     
@@ -94,21 +97,25 @@ extension AILoginViewController : UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if logoTopConstraint.constant == 0 {
-            self.logoTopConstraint.constant = CGFloat(-loginViewTopConstraintDefault)
-            UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-                self.view.layoutIfNeeded()
-                }) { (finished) -> Void in
+        if isLessThanIP6 {
+            if logoTopConstraint.constant == 0 {
+                self.logoTopConstraint.constant = CGFloat(-loginViewTopConstraintDefault)
+                UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                    self.view.layoutIfNeeded()
+                    }) { (finished) -> Void in
+                }
             }
         }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if logoTopConstraint.constant < 0  {
-            self.logoTopConstraint.constant = 0
-            UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                self.view.layoutIfNeeded()
-                }) { (finished) -> Void in
+        if isLessThanIP6 {
+            if logoTopConstraint.constant < 0  {
+                self.logoTopConstraint.constant = 0
+                UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                    self.view.layoutIfNeeded()
+                    }) { (finished) -> Void in
+                }
             }
         }
     }
