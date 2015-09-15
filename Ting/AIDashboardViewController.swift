@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 let micSize : CGFloat = 50
 
@@ -15,24 +16,37 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
     // MARK: - Properties
     
     var userIntent : AIIntentModel?
+    var intentArray : NSArray!
+    let synth = AVSpeechSynthesizer()
+    var utterance = AVSpeechUtterance(string: "")
+    
+    // Outlets
+    
     @IBOutlet weak var micButtonView: UIView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
-    
     @IBOutlet weak var navigatnBar: UINavigationBar!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var amountSpentMonthlyLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeProperties()
         setUpView()
     }
 
     // MARK: - ViewSetup
     
-    func setUpView() {
+    func initializeProperties(){
         userIntent = nil
+        intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance)
         Wit.sharedInstance().delegate = self
-        
-        navigatnBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.tingHelveticaRegularWithSize(14)]
+
+    }
+    
+    func setUpView() {
+        navigatnBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.tingHelveticaRegularWithSize(16)]
         totalBalanceLabel.attributedText = createAmountString("₹ 2,40,000")
         lastTransactionLabel.attributedText = createAmountString("₹ 29,550")
         amountSpentMonthlyLabel.attributedText = createAmountString("₹ 45,000")
@@ -72,8 +86,21 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
                     print(userIntent?.intent)
                     print(userIntent?.entity)
                     print(userIntent?.confidence)
+                    
+                    // read balance
+                    if userIntent?.intent == Constants.WITIntents.WITBalance {
+                        readCurrentTotalBalance()
+                    }
                 }
             }
         }
+    }
+    
+    //MARK: - WITIntents
+    
+    func readCurrentTotalBalance() {
+        utterance = AVSpeechUtterance(string: "Your current balance is Rupees " + totalBalanceLabel.text!)
+        utterance.rate = 0.4
+        synth.speakUtterance(utterance)
     }
 }

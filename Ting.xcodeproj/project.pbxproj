@@ -14,6 +14,7 @@
 		4E3158FB1BA5DB23006987B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FA1BA5DB23006987B9 /* Constants.swift */; };
 		4E3158FD1BA5E6FF006987B9 /* AILoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FC1BA5E6FF006987B9 /* AILoginManager.swift */; };
 		4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3158FE1BA5ED64006987B9 /* AIFont.swift */; };
+		4E5E676D1BA891A900BFCA90 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5E676C1BA891A900BFCA90 /* AVFoundation.framework */; };
 		4E8B245A1BA814E700365F6E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8B24591BA814E700365F6E /* logo.png */; };
 		4E8B245C1BA814EE00365F6E /* bulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8B245B1BA814EE00365F6E /* bulb.png */; };
 		4E8B24611BA81D6D00365F6E /* AIDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B24601BA81D6D00365F6E /* AIDashboardViewController.swift */; };
@@ -34,6 +35,7 @@
 		4E3158FA1BA5DB23006987B9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E3158FC1BA5E6FF006987B9 /* AILoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AILoginManager.swift; sourceTree = "<group>"; };
 		4E3158FE1BA5ED64006987B9 /* AIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIFont.swift; sourceTree = "<group>"; };
+		4E5E676C1BA891A900BFCA90 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E8B24591BA814E700365F6E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4E8B245B1BA814EE00365F6E /* bulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulb.png; sourceTree = "<group>"; };
 		4E8B24601BA81D6D00365F6E /* AIDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIDashboardViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5E676D1BA891A900BFCA90 /* AVFoundation.framework in Frameworks */,
 				2638EC4B2052C9B9CB9A1FE8 /* libPods-Ting.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +168,7 @@
 		83471941706510F02D0DAA3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E5E676C1BA891A900BFCA90 /* AVFoundation.framework */,
 				64286D5AD29B947B089FC573 /* libPods-Ting.a */,
 			);
 			name = Frameworks;

@@ -17,6 +17,7 @@ class Constants {
     struct WITIntents {
         static let WITBlockCard : String = "block_card"
         static let WITTransferMoney : String = "transfer_money"
+        static let WITBalance : String = "discrete_balance"
     }
     
     struct WITToken {
