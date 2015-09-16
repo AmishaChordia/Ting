@@ -9,25 +9,22 @@
 import UIKit
 import AVFoundation
 
-let micSize : CGFloat = 50
+let micSize : CGFloat = 60
 
-class AIDashboardViewController: AIBaseViewController, WitDelegate {
+class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
    
     // MARK: - Properties
     
     var userIntent : AIIntentModel?
     var intentArray : NSArray!
-    let synth = AVSpeechSynthesizer()
-    var utterance = AVSpeechUtterance(string: "")
     
     // Outlets
     
-    @IBOutlet weak var micButtonView: UIView!
+    @IBOutlet weak var micInteractionView: UIView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
     @IBOutlet weak var navigatnBar: UINavigationBar!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var amountSpentMonthlyLabel: UILabel!
-    
     
     
     override func viewDidLoad() {
@@ -41,8 +38,6 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
     func initializeProperties(){
         userIntent = nil
         intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance)
-        Wit.sharedInstance().delegate = self
-
     }
     
     func setUpView() {
@@ -50,12 +45,15 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
         totalBalanceLabel.attributedText = createAmountString("₹ 2,40,000")
         lastTransactionLabel.attributedText = createAmountString("₹ 29,550")
         amountSpentMonthlyLabel.attributedText = createAmountString("₹ 45,000")
-        addWITButton()
+        addMicInteractionView()
     }
     
-    func addWITButton() {
-        let button : WITMicButton = WITMicButton(frame: CGRectMake(0, 0, micSize, micSize))
-        micButtonView.addSubview(button)
+    func addMicInteractionView() {
+        let micView : AIMicInteractionView = NSBundle.mainBundle().loadNibNamed("AIMicInteractionView", owner: nil, options: nil).first as! AIMicInteractionView
+        
+        micView.currentBalance = self.totalBalanceLabel.text!
+        micView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, micInteractionView.frame.height)
+        micInteractionView.addSubview(micView)
     }
     
     // MARK: - Utility mathods
@@ -72,40 +70,10 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
         return attributedAmount
     }
     
-    // MARK: - Wit Delegate
     
-    func witDidGraspIntent(outcomes: [AnyObject]!, messageId: String!, customData: AnyObject!, error e: NSError!) {
-        print(outcomes)
-        if (e != nil) {
-            
-        }
-        else {
-            if outcomes != nil && outcomes.count > 0 {
-                if let dataDict : NSDictionary = outcomes.first as? NSDictionary {
-                    userIntent = AIIntentModel(dict: dataDict)
-                    print(userIntent?.intent)
-                    print(userIntent?.entity)
-                    print(userIntent?.confidence)
-                    
-                    // read balance
-                    if userIntent?.intent == Constants.WITIntents.WITBalance {
-                        readCurrentTotalBalance()
-                    }
-                }
-            }
-        }
-    }
+    //MARK: - AIIntentDelegate
     
-    //MARK: - WITIntents
-    
-    func readCurrentTotalBalance() {
-        utterance = AVSpeechUtterance(string: "Your current balance is Rupees " + totalBalanceLabel.text!)
-        utterance.rate = 0.4
-        do {
-            try  AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
-        }
-        catch{
-        }
-        synth.speakUtterance(utterance)
+    func WITUserIntentSelected(intent: AIIntentModel) {
+        userIntent = intent
     }
 }

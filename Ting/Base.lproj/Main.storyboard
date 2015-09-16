@@ -21,7 +21,6 @@
             <string>HelveticaNeue-Thin</string>
             <string>HelveticaNeue-Light</string>
             <string>HelveticaNeue-Light</string>
-            <string>HelveticaNeue-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -516,12 +515,14 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="as of 19th July 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ6-2y-60G">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="99" id="8Lp-YY-4yM"/>
+                                                    <constraint firstAttribute="width" constant="99" id="8Lp-YY-4yM">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="height" constant="10" id="LtT-oR-byJ">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="11"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                                                     </constraint>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" red="0.36470588235294116" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
@@ -565,10 +566,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="3Fg-0w-qD9">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="160"/>
                                             </constraint>
                                             <constraint firstItem="xTk-2x-8Ip" firstAttribute="top" secondItem="cYW-Is-aFK" secondAttribute="top" constant="35" id="AqD-S9-EJD">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
                                             </constraint>
                                             <constraint firstItem="mJ6-2y-60G" firstAttribute="top" secondItem="T9h-iI-wga" secondAttribute="bottom" constant="10" id="EWk-1J-aFG"/>
                                             <constraint firstItem="T9h-iI-wga" firstAttribute="top" secondItem="xTk-2x-8Ip" secondAttribute="bottom" constant="10" id="N1G-ks-Bhr"/>
@@ -796,7 +797,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="ZiA-2C-hBy"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
                                                                 <color key="textColor" red="0.12941176469999999" green="0.46274509800000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
@@ -831,15 +832,19 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstItem="nSv-Vd-BBb" firstAttribute="leading" secondItem="3Dy-91-8XV" secondAttribute="leading" constant="15" id="0Ck-ad-96C"/>
-                                                            <constraint firstItem="nSv-Vd-BBb" firstAttribute="top" secondItem="oK0-iG-5Su" secondAttribute="bottom" constant="-2" id="4CL-PT-TYn"/>
+                                                            <constraint firstItem="nSv-Vd-BBb" firstAttribute="top" secondItem="oK0-iG-5Su" secondAttribute="bottom" constant="-2" id="4CL-PT-TYn">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                            </constraint>
                                                             <constraint firstAttribute="height" constant="44" id="B7k-vN-11e">
-                                                                <variation key="heightClass=regular-widthClass=compact" constant="54"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="65"/>
                                                             </constraint>
                                                             <constraint firstItem="oK0-iG-5Su" firstAttribute="leading" secondItem="3Dy-91-8XV" secondAttribute="leading" constant="15" id="BQi-bN-ElD"/>
                                                             <constraint firstAttribute="trailing" secondItem="Zct-fH-369" secondAttribute="trailing" id="KwY-jO-acj"/>
                                                             <constraint firstItem="Zct-fH-369" firstAttribute="leading" secondItem="3Dy-91-8XV" secondAttribute="leading" id="gpP-d9-i4I"/>
                                                             <constraint firstAttribute="bottom" secondItem="Zct-fH-369" secondAttribute="bottom" id="j13-66-0x4"/>
-                                                            <constraint firstItem="oK0-iG-5Su" firstAttribute="top" secondItem="3Dy-91-8XV" secondAttribute="top" id="x11-OA-jRf"/>
+                                                            <constraint firstItem="oK0-iG-5Su" firstAttribute="top" secondItem="3Dy-91-8XV" secondAttribute="top" id="x11-OA-jRf">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="subviews">
@@ -902,7 +907,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="123" id="bVN-1J-tXw"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
@@ -925,7 +930,7 @@
                                                     <constraint firstItem="OWS-jp-L8J" firstAttribute="top" secondItem="qjb-O7-W9x" secondAttribute="top" id="I2V-Ua-t2p"/>
                                                     <constraint firstAttribute="trailing" secondItem="3Dy-91-8XV" secondAttribute="trailing" id="IQU-ad-2sn"/>
                                                     <constraint firstAttribute="height" constant="100" id="XJE-tZ-aFC">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="90"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
                                                     </constraint>
                                                     <constraint firstItem="3Dy-91-8XV" firstAttribute="top" secondItem="aDl-sC-O0c" secondAttribute="bottom" id="k0H-Ow-BoO"/>
                                                     <constraint firstAttribute="bottom" secondItem="3Dy-91-8XV" secondAttribute="bottom" id="mpy-bx-GSt"/>
@@ -990,69 +995,25 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnO-9d-36c">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJU-Xp-SUJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="bI7-bq-IB1"/>
-                                                    <constraint firstAttribute="height" constant="50" id="yoq-oy-0f3"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="bI7-bq-IB1"/>
-                                                        <exclude reference="yoq-oy-0f3"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <mask key="constraints">
-                                                        <include reference="bI7-bq-IB1"/>
-                                                        <include reference="yoq-oy-0f3"/>
-                                                    </mask>
-                                                </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-cX-cEe">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="161" id="HW1-1F-oNf"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Vqe-dd-l15"/>
-                                                </constraints>
-                                                <string key="text">How may we help you today?
-e.g. "Change my pin"</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="HW1-1F-oNf"/>
-                                                        <exclude reference="Vqe-dd-l15"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <mask key="constraints">
-                                                        <include reference="HW1-1F-oNf"/>
-                                                        <include reference="Vqe-dd-l15"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.10588235294117647" green="0.41176470588235292" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="8OR-P9-1Xk" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" constant="15" id="2Et-dK-Sbt"/>
+                                            <constraint firstAttribute="bottom" secondItem="LJU-Xp-SUJ" secondAttribute="bottom" constant="22" id="ACR-bh-JzN"/>
                                             <constraint firstItem="AgI-mU-rhw" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" id="Ajv-K9-0Yo"/>
                                             <constraint firstItem="8OR-P9-1Xk" firstAttribute="top" secondItem="zOW-gc-Jwn" secondAttribute="top" constant="10" id="BFt-3j-RaS"/>
                                             <constraint firstItem="AgI-mU-rhw" firstAttribute="top" secondItem="qjb-O7-W9x" secondAttribute="bottom" constant="15" id="Hup-8J-wJs"/>
-                                            <constraint firstItem="gnO-9d-36c" firstAttribute="top" secondItem="cfm-cX-cEe" secondAttribute="bottom" constant="23" id="MPm-FM-Adp">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
-                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="qjb-O7-W9x" secondAttribute="trailing" constant="15" id="RA4-mh-cXy"/>
-                                            <constraint firstAttribute="bottom" secondItem="gnO-9d-36c" secondAttribute="bottom" constant="30" id="TgK-Xi-xrp">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
-                                            </constraint>
                                             <constraint firstItem="qjb-O7-W9x" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" constant="15" id="Wxl-N3-cvQ"/>
                                             <constraint firstAttribute="trailing" secondItem="8OR-P9-1Xk" secondAttribute="trailing" constant="15" id="XwW-0w-L5l"/>
                                             <constraint firstAttribute="trailing" secondItem="AgI-mU-rhw" secondAttribute="trailing" id="c1c-HY-cBL"/>
-                                            <constraint firstItem="cfm-cX-cEe" firstAttribute="centerX" secondItem="zOW-gc-Jwn" secondAttribute="centerX" id="kKb-ij-Hml"/>
-                                            <constraint firstItem="gnO-9d-36c" firstAttribute="centerX" secondItem="zOW-gc-Jwn" secondAttribute="centerX" id="np4-3B-sar"/>
+                                            <constraint firstItem="LJU-Xp-SUJ" firstAttribute="top" secondItem="AgI-mU-rhw" secondAttribute="bottom" constant="22" id="jLU-dM-d5J"/>
+                                            <constraint firstItem="LJU-Xp-SUJ" firstAttribute="leading" secondItem="zOW-gc-Jwn" secondAttribute="leading" id="psf-hL-2eH"/>
+                                            <constraint firstAttribute="trailing" secondItem="LJU-Xp-SUJ" secondAttribute="trailing" id="uoj-ql-tca"/>
                                             <constraint firstItem="qjb-O7-W9x" firstAttribute="top" secondItem="8OR-P9-1Xk" secondAttribute="bottom" constant="10" id="zna-K1-oCi"/>
                                         </constraints>
                                         <variation key="default">
@@ -1060,23 +1021,22 @@ e.g. "Change my pin"</string>
                                                 <exclude reference="8OR-P9-1Xk"/>
                                                 <exclude reference="qjb-O7-W9x"/>
                                                 <exclude reference="AgI-mU-rhw"/>
-                                                <exclude reference="gnO-9d-36c"/>
-                                                <exclude reference="cfm-cX-cEe"/>
+                                                <exclude reference="LJU-Xp-SUJ"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="kKb-ij-Hml"/>
                                                 <exclude reference="2Et-dK-Sbt"/>
                                                 <exclude reference="BFt-3j-RaS"/>
                                                 <exclude reference="XwW-0w-L5l"/>
-                                                <exclude reference="Ajv-K9-0Yo"/>
-                                                <exclude reference="Hup-8J-wJs"/>
-                                                <exclude reference="c1c-HY-cBL"/>
-                                                <exclude reference="MPm-FM-Adp"/>
-                                                <exclude reference="TgK-Xi-xrp"/>
-                                                <exclude reference="np4-3B-sar"/>
                                                 <exclude reference="RA4-mh-cXy"/>
                                                 <exclude reference="Wxl-N3-cvQ"/>
                                                 <exclude reference="zna-K1-oCi"/>
+                                                <exclude reference="Ajv-K9-0Yo"/>
+                                                <exclude reference="Hup-8J-wJs"/>
+                                                <exclude reference="c1c-HY-cBL"/>
+                                                <exclude reference="ACR-bh-JzN"/>
+                                                <exclude reference="jLU-dM-d5J"/>
+                                                <exclude reference="psf-hL-2eH"/>
+                                                <exclude reference="uoj-ql-tca"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -1084,23 +1044,22 @@ e.g. "Change my pin"</string>
                                                 <include reference="8OR-P9-1Xk"/>
                                                 <include reference="qjb-O7-W9x"/>
                                                 <include reference="AgI-mU-rhw"/>
-                                                <include reference="gnO-9d-36c"/>
-                                                <include reference="cfm-cX-cEe"/>
+                                                <include reference="LJU-Xp-SUJ"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="kKb-ij-Hml"/>
                                                 <include reference="2Et-dK-Sbt"/>
                                                 <include reference="BFt-3j-RaS"/>
                                                 <include reference="XwW-0w-L5l"/>
-                                                <include reference="Ajv-K9-0Yo"/>
-                                                <include reference="Hup-8J-wJs"/>
-                                                <include reference="c1c-HY-cBL"/>
-                                                <include reference="MPm-FM-Adp"/>
-                                                <include reference="TgK-Xi-xrp"/>
-                                                <include reference="np4-3B-sar"/>
                                                 <include reference="RA4-mh-cXy"/>
                                                 <include reference="Wxl-N3-cvQ"/>
                                                 <include reference="zna-K1-oCi"/>
+                                                <include reference="Ajv-K9-0Yo"/>
+                                                <include reference="Hup-8J-wJs"/>
+                                                <include reference="c1c-HY-cBL"/>
+                                                <include reference="ACR-bh-JzN"/>
+                                                <include reference="jLU-dM-d5J"/>
+                                                <include reference="psf-hL-2eH"/>
+                                                <include reference="uoj-ql-tca"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1192,7 +1151,7 @@ e.g. "Change my pin"</string>
                     <connections>
                         <outlet property="amountSpentMonthlyLabel" destination="TiE-5f-WqO" id="AdA-0u-wFJ"/>
                         <outlet property="lastTransactionLabel" destination="nSv-Vd-BBb" id="Rgp-rK-Vlj"/>
-                        <outlet property="micButtonView" destination="gnO-9d-36c" id="HOd-qA-2R9"/>
+                        <outlet property="micInteractionView" destination="LJU-Xp-SUJ" id="5cf-Cl-SZq"/>
                         <outlet property="navigatnBar" destination="YEw-va-954" id="O5s-O4-OL3"/>
                         <outlet property="totalBalanceLabel" destination="Byr-LF-hVX" id="uI8-21-Umt"/>
                     </connections>

@@ -14,6 +14,13 @@ extension UIColor {
         return UIColor(red: 33/255.0, green: 118/255.0, blue: 155/255.0, alpha: 1)
     }
     
+    class func tingDarkBlueColor() -> UIColor {
+        return UIColor(red: 27/255.0, green: 105/255.0, blue: 143/255.0, alpha: 1)
+    }
+    
+    class func tingDividerBlueColor() -> UIColor {
+        return UIColor(red: 22/255.0, green: 92/255.0, blue: 131/255.0, alpha: 1)
+    }
     
     
     class func tingGrayColor(opacity : CGFloat) -> UIColor {

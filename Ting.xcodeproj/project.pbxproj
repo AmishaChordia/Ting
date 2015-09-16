@@ -23,6 +23,8 @@
 		4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1F1BA57D03004A1627 /* Main.storyboard */; };
 		4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */; };
 		4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C251BA57D03004A1627 /* Assets.xcassets */; };
+		4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */; };
+		4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */; };
 		4EFCA1221BA581320021314E /* AIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA1211BA581320021314E /* AIColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		4E9B0C231BA57D03004A1627 /* Ting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ting.xcdatamodel; sourceTree = "<group>"; };
 		4E9B0C251BA57D03004A1627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9B0C2A1BA57D03004A1627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMicInteractionView.swift; sourceTree = "<group>"; };
+		4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AIMicInteractionView.xib; sourceTree = "<group>"; };
 		4EFCA1211BA581320021314E /* AIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIColor.swift; sourceTree = "<group>"; };
 		64286D5AD29B947B089FC573 /* libPods-Ting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64672E69E6D2D79949FA3B /* Pods-Ting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ting/Pods-Ting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				4EFCA1211BA581320021314E /* AIColor.swift */,
 				4E3158FA1BA5DB23006987B9 /* Constants.swift */,
 				4E3158FE1BA5ED64006987B9 /* AIFont.swift */,
+				4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */,
+				4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				4E8B245C1BA814EE00365F6E /* bulb.png in Resources */,
 				4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */,
 				4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */,
+				4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +291,7 @@
 				4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */,
 				4E3158F11BA59861006987B9 /* AIBaseViewController.swift in Sources */,
 				4E3158EF1BA58F43006987B9 /* AILoginViewController.swift in Sources */,
+				4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */,
 				4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */,
 				4E3158F51BA5DAA6006987B9 /* KeychainWrapper.m in Sources */,
 				4E8B24611BA81D6D00365F6E /* AIDashboardViewController.swift in Sources */,
