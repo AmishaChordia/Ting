@@ -101,6 +101,11 @@ class AIDashboardViewController: AIBaseViewController, WitDelegate {
     func readCurrentTotalBalance() {
         utterance = AVSpeechUtterance(string: "Your current balance is Rupees " + totalBalanceLabel.text!)
         utterance.rate = 0.4
+        do {
+            try  AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
+        }
+        catch{
+        }
         synth.speakUtterance(utterance)
     }
 }
