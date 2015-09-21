@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // failed
         }
         
-        Wit.sharedInstance().accessToken = Constants.WITToken.kWIToken
+        Wit.sharedInstance().accessToken = Constants.WITRequisites.AIToken
         Wit.sharedInstance().detectSpeechStop = WITVadConfig.DetectSpeechStop
     }
     

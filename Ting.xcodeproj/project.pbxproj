@@ -25,6 +25,7 @@
 		4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C251BA57D03004A1627 /* Assets.xcassets */; };
 		4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */; };
 		4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */; };
+		4EE5A0941BAFBAFC00391C9C /* AISpeechClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */; };
 		4EFCA1221BA581320021314E /* AIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA1211BA581320021314E /* AIColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		4E9B0C2A1BA57D03004A1627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMicInteractionView.swift; sourceTree = "<group>"; };
 		4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AIMicInteractionView.xib; sourceTree = "<group>"; };
+		4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AISpeechClient.swift; sourceTree = "<group>"; };
 		4EFCA1211BA581320021314E /* AIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIColor.swift; sourceTree = "<group>"; };
 		64286D5AD29B947B089FC573 /* libPods-Ting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64672E69E6D2D79949FA3B /* Pods-Ting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ting/Pods-Ting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,16 +150,25 @@
 			path = Ting;
 			sourceTree = "<group>";
 		};
+		4EE5A0921BAFBA5800391C9C /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */,
+				4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */,
+				4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */,
+			);
+			name = ReusableComponents;
+			sourceTree = "<group>";
+		};
 		4EFCA11A1BA57E950021314E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4EE5A0921BAFBA5800391C9C /* ReusableComponents */,
 				4E3158F31BA5DAA6006987B9 /* KeychainWrapper.h */,
 				4E3158F41BA5DAA6006987B9 /* KeychainWrapper.m */,
 				4EFCA1211BA581320021314E /* AIColor.swift */,
 				4E3158FA1BA5DB23006987B9 /* Constants.swift */,
 				4E3158FE1BA5ED64006987B9 /* AIFont.swift */,
-				4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */,
-				4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 				4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */,
 				4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */,
 				4E3158F51BA5DAA6006987B9 /* KeychainWrapper.m in Sources */,
+				4EE5A0941BAFBAFC00391C9C /* AISpeechClient.swift in Sources */,
 				4E8B24611BA81D6D00365F6E /* AIDashboardViewController.swift in Sources */,
 				4E3158FB1BA5DB23006987B9 /* Constants.swift in Sources */,
 				4E3158FD1BA5E6FF006987B9 /* AILoginManager.swift in Sources */,

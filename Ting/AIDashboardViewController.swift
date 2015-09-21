@@ -12,7 +12,7 @@ import AVFoundation
 let micSize : CGFloat = 60
 
 class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
-   
+    
     // MARK: - Properties
     
     var userIntent : AIIntentModel?
@@ -32,7 +32,7 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
         initializeProperties()
         setUpView()
     }
-
+    
     // MARK: - ViewSetup
     
     func initializeProperties(){
@@ -51,12 +51,11 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     func addMicInteractionView() {
         let micView : AIMicInteractionView = NSBundle.mainBundle().loadNibNamed("AIMicInteractionView", owner: nil, options: nil).first as! AIMicInteractionView
         
-        micView.currentBalance = self.totalBalanceLabel.text!
         micView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, micInteractionView.frame.height)
         micInteractionView.addSubview(micView)
     }
     
-    // MARK: - Utility mathods
+    // MARK: - Utility methods
     
     static func createDashboardVCInstance() -> AIDashboardViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -73,7 +72,21 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     //MARK: - AIIntentDelegate
     
-    func WITUserIntentSelected(intent: AIIntentModel) {
-        userIntent = intent
+    func WITUserIntentSelected(intentModel: AIIntentModel) {
+        userIntent = intentModel
+        
+        if intentModel.confidence > Constants.WITRequisites.AIConfidence  && intentArray.containsObject((intentModel.intent)!) {
+            if intentModel.intent == Constants.WITIntents.WITBalance {
+                readCurrentTotalBalance()
+            }
+        }
+        else {
+            AISpeechClient.readCurrentString(Constants.AIStrings.AIErrorString)
+        }
+    }
+ 
+    
+    func readCurrentTotalBalance() {
+        AISpeechClient.readCurrentString("Your current balance is Rupees " + totalBalanceLabel.text!)
     }
 }

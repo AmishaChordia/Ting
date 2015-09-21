@@ -20,7 +20,14 @@ class Constants {
         static let WITBalance : String = "discrete_balance"
     }
     
-    struct WITToken {
-        static let kWIToken : String = "NYE5MFRBATXQBEQQP2TQJ3YJSMFEENOO"
+    struct WITRequisites {
+        static let AIToken : String = "NYE5MFRBATXQBEQQP2TQJ3YJSMFEENOO"
+        static let AIConfidence = 0.3
     }
+    
+    struct AIStrings {
+        static let AIErrorString : String = "Sorry!  I did not get that. Please try again!"
+
+    }
+    
 }

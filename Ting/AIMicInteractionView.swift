@@ -17,10 +17,7 @@ class AIMicInteractionView: UIView , WitDelegate {
 
     @IBOutlet weak var micTextLabel: UILabel!
     @IBOutlet weak var micView: UIView!
-    var currentBalance : String = ""
     
-    let synth = AVSpeechSynthesizer()
-    var utterance = AVSpeechUtterance(string: "")
     var delegate : AIIntentDelegate?
     
     override func awakeFromNib() {
@@ -51,28 +48,16 @@ class AIMicInteractionView: UIView , WitDelegate {
                     print(userIntent.intent)
                     print(userIntent.entity)
                     print(userIntent.confidence)
-                    
-                    if userIntent.intent == Constants.WITIntents.WITBalance {
-                        readCurrentTotalBalance()
-                    }
-                    else {
-                        delegate?.WITUserIntentSelected(userIntent)
-                    }
+                    delegate?.WITUserIntentSelected(userIntent)
                 }
+                else {
+                    AISpeechClient.readCurrentString(Constants.AIStrings.AIErrorString)
+                }
+            }
+            else {
+                AISpeechClient.readCurrentString(Constants.AIStrings.AIErrorString)
             }
         }
     }
     
-    //MARK: - WITIntents
-    
-    func readCurrentTotalBalance() {
-        utterance = AVSpeechUtterance(string: "Your current balance is Rupees " + currentBalance)
-        utterance.rate = 0.4
-        do {
-            try  AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
-        }
-        catch{
-        }
-        synth.speakUtterance(utterance)
-    }
 }
