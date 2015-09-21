@@ -26,7 +26,7 @@ class AILoginViewController: AIBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
-            invokeTouchIDWithUsername(savedUsername as! String)
+            username.text = savedUsername as? String
         }
     }
     

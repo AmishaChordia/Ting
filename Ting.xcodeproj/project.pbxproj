@@ -26,6 +26,8 @@
 		4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */; };
 		4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */; };
 		4EE5A0941BAFBAFC00391C9C /* AISpeechClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */; };
+		4EE5A0961BAFD4DE00391C9C /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5A0951BAFD4DE00391C9C /* thumb.png */; };
+		4EE5A0991BAFD6CF00391C9C /* AIValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A0981BAFD6CF00391C9C /* AIValidationViewController.swift */; };
 		4EFCA1221BA581320021314E /* AIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA1211BA581320021314E /* AIColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMicInteractionView.swift; sourceTree = "<group>"; };
 		4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AIMicInteractionView.xib; sourceTree = "<group>"; };
 		4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AISpeechClient.swift; sourceTree = "<group>"; };
+		4EE5A0951BAFD4DE00391C9C /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
+		4EE5A0981BAFD6CF00391C9C /* AIValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIValidationViewController.swift; sourceTree = "<group>"; };
 		4EFCA1211BA581320021314E /* AIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIColor.swift; sourceTree = "<group>"; };
 		64286D5AD29B947B089FC573 /* libPods-Ting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64672E69E6D2D79949FA3B /* Pods-Ting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ting/Pods-Ting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			children = (
 				4E3158F01BA59861006987B9 /* AIBaseViewController.swift */,
 				4E9B0C1F1BA57D03004A1627 /* Main.storyboard */,
+				4EE5A0971BAFD60C00391C9C /* ValidationScreen */,
 				4E8B245D1BA81C3800365F6E /* DashBoard */,
 				4E3158F71BA5DAB9006987B9 /* Login */,
 			);
@@ -94,6 +99,7 @@
 		4E8B24541BA8067F00365F6E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4EE5A0951BAFD4DE00391C9C /* thumb.png */,
 				4E8B245B1BA814EE00365F6E /* bulb.png */,
 				4E8B24591BA814E700365F6E /* logo.png */,
 			);
@@ -158,6 +164,14 @@
 				4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */,
 			);
 			name = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		4EE5A0971BAFD60C00391C9C /* ValidationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5A0981BAFD6CF00391C9C /* AIValidationViewController.swift */,
+			);
+			name = ValidationScreen;
 			sourceTree = "<group>";
 		};
 		4EFCA11A1BA57E950021314E /* Utilities */ = {
@@ -253,6 +267,7 @@
 			files = (
 				4E8B245A1BA814E700365F6E /* logo.png in Resources */,
 				4E8B245C1BA814EE00365F6E /* bulb.png in Resources */,
+				4EE5A0961BAFD4DE00391C9C /* thumb.png in Resources */,
 				4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */,
 				4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */,
 				4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */,
@@ -299,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE5A0991BAFD6CF00391C9C /* AIValidationViewController.swift in Sources */,
 				4E3158FF1BA5ED64006987B9 /* AIFont.swift in Sources */,
 				4E3158F11BA59861006987B9 /* AIBaseViewController.swift in Sources */,
 				4E3158EF1BA58F43006987B9 /* AILoginViewController.swift in Sources */,

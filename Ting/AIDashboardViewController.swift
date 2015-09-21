@@ -14,8 +14,7 @@ let micSize : CGFloat = 60
 class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     // MARK: - Properties
-    
-    var userIntent : AIIntentModel?
+
     var intentArray : NSArray!
     
     // Outlets
@@ -36,7 +35,6 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     // MARK: - ViewSetup
     
     func initializeProperties(){
-        userIntent = nil
         intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance)
     }
     
@@ -50,7 +48,7 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     func addMicInteractionView() {
         let micView : AIMicInteractionView = NSBundle.mainBundle().loadNibNamed("AIMicInteractionView", owner: nil, options: nil).first as! AIMicInteractionView
-        
+        micView.delegate = self
         micView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, micInteractionView.frame.height)
         micInteractionView.addSubview(micView)
     }
@@ -73,11 +71,14 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     //MARK: - AIIntentDelegate
     
     func WITUserIntentSelected(intentModel: AIIntentModel) {
-        userIntent = intentModel
-        
         if intentModel.confidence > Constants.WITRequisites.AIConfidence  && intentArray.containsObject((intentModel.intent)!) {
             if intentModel.intent == Constants.WITIntents.WITBalance {
                 readCurrentTotalBalance()
+            }
+            else {
+                let validationVC : AIValidationViewController = AIValidationViewController.createValidationVCInstance()
+                validationVC.intentModel = intentModel
+                self.navigationController?.pushViewController(validationVC, animated: true)
             }
         }
         else {
