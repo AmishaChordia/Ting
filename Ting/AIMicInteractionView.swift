@@ -36,7 +36,6 @@ class AIMicInteractionView: UIView , WitDelegate {
     }
     
     func witDidGraspIntent(outcomes: [AnyObject]!, messageId: String!, customData: AnyObject!, error e: NSError!) {
-        print(outcomes)
         if (e != nil) {
             
         }

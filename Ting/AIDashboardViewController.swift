@@ -63,7 +63,7 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     func createAmountString(moneyString : String) -> NSAttributedString {
         let attributedAmount : NSMutableAttributedString = NSMutableAttributedString(string: moneyString)
-        attributedAmount.addAttribute(NSFontAttributeName , value:  UIFont.tingHelveticaMediumWithSize(25.0), range: NSMakeRange(0, 1))
+        attributedAmount.addAttribute(NSFontAttributeName , value:  UIFont.tingHelveticaBoldWithSize(25.0), range: NSMakeRange(0, 1))
         return attributedAmount
     }
     

@@ -15,16 +15,14 @@ class AILoginManager: NSObject {
         let context = LAContext()
         let authenticationString = "Please authenticate your credentials."
         
-        do{
-            try context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics)
-            
-            context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: authenticationString, reply: { (success, authError) -> Void in
-                completion(success: success, authError: authError)
+        var error : NSError? ;
+        
+        let touchIDEligibility : Bool = context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error)
+        if touchIDEligibility {
+            context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: authenticationString, reply: { (success, touchIDError) -> Void in
+                    completion(success: success, authError: touchIDError)
+                
             })
         }
-        catch{
-            
-        }
-        
     }
 }
