@@ -24,6 +24,8 @@
 		4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */; };
 		4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C251BA57D03004A1627 /* Assets.xcassets */; };
 		4EB4A0761BB6995E00FE9F83 /* ting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4A0751BB6925800FE9F83 /* ting.ttf */; };
+		4EB4A0781BB6BA4300FE9F83 /* AIEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4A0771BB6BA4300FE9F83 /* AIEntityModel.swift */; settings = {ASSET_TAGS = (); }; };
+		4EB4A07A1BB6BBB200FE9F83 /* AIIntentValidationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4A0791BB6BBB200FE9F83 /* AIIntentValidationClient.swift */; settings = {ASSET_TAGS = (); }; };
 		4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */; };
 		4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */; };
 		4EE5A0941BAFBAFC00391C9C /* AISpeechClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */; };
@@ -52,6 +54,8 @@
 		4E9B0C251BA57D03004A1627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9B0C2A1BA57D03004A1627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB4A0751BB6925800FE9F83 /* ting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ting.ttf; sourceTree = "<group>"; };
+		4EB4A0771BB6BA4300FE9F83 /* AIEntityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIEntityModel.swift; sourceTree = "<group>"; };
+		4EB4A0791BB6BBB200FE9F83 /* AIIntentValidationClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIIntentValidationClient.swift; sourceTree = "<group>"; };
 		4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMicInteractionView.swift; sourceTree = "<group>"; };
 		4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AIMicInteractionView.xib; sourceTree = "<group>"; };
 		4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AISpeechClient.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8B24631BA82B1300365F6E /* AIIntentModel.swift */,
+				4EB4A0771BB6BA4300FE9F83 /* AIEntityModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				4EE5A0981BAFD6CF00391C9C /* AIValidationViewController.swift */,
+				4EB4A0791BB6BBB200FE9F83 /* AIIntentValidationClient.swift */,
 			);
 			name = ValidationScreen;
 			sourceTree = "<group>";
@@ -328,6 +334,8 @@
 				4E8B24641BA82B1300365F6E /* AIIntentModel.swift in Sources */,
 				4E9B0C1C1BA57D03004A1627 /* AppDelegate.swift in Sources */,
 				4EFCA1221BA581320021314E /* AIColor.swift in Sources */,
+				4EB4A0781BB6BA4300FE9F83 /* AIEntityModel.swift in Sources */,
+				4EB4A07A1BB6BBB200FE9F83 /* AIIntentValidationClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

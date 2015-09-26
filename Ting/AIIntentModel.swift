@@ -14,7 +14,7 @@ class AIIntentModel: NSObject {
     
     var intent : String?
     var confidence : Double?
-    var entity : NSDictionary?
+    var entity : AIEntityModel?
     
     init(dict : NSDictionary) {
         if let userIntent : String = dict.valueForKey(AIIntent) as? String  {
@@ -27,7 +27,7 @@ class AIIntentModel: NSObject {
         
         if intent == Constants.WITIntents.WITTransferMoney {
             if let userEntity : NSDictionary = dict.valueForKey(AIEntities) as? NSDictionary {
-                entity = userEntity
+                entity = AIEntityModel(dict: userEntity)
             }            
         }
     }

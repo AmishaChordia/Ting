@@ -36,7 +36,7 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     // MARK: - ViewSetup
     
     func initializeProperties(){
-        intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance)
+        intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance, Constants.WITIntents.WITChangePIN)
         
         leftBarBtn.setTitleTextAttributes([NSFontAttributeName : UIFont.tingAssetsWithSize(25)], forState: UIControlState.Normal)
         rightBarBtn.setTitleTextAttributes([NSFontAttributeName : UIFont.tingAssetsWithSize(25)], forState: UIControlState.Normal)

@@ -18,6 +18,8 @@ class Constants {
         static let WITBlockCard : String = "block_card"
         static let WITTransferMoney : String = "transfer_money"
         static let WITBalance : String = "discrete_balance"
+        static let WITChangePIN : String = "change_PIN"
+
     }
     
     struct WITRequisites {
@@ -29,5 +31,5 @@ class Constants {
         static let AIErrorString : String = "Sorry!  I did not get that. Please try again!"
 
     }
-    
+
 }

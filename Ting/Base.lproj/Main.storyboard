@@ -1285,7 +1285,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer ₹ 40,000 to Amisha?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inb-Kj-3D7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inb-Kj-3D7">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="71" id="bSu-U5-Cx0"/>
@@ -1452,7 +1452,7 @@
                                             <constraint firstAttribute="height" constant="114" id="FJf-36-5P2"/>
                                             <constraint firstAttribute="width" constant="87" id="VEC-mt-5dA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ting" family="ting" pointSize="70"/>
+                                        <fontDescription key="fontDescription" name="ting" family="ting" pointSize="80"/>
                                         <state key="normal" title="d">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>

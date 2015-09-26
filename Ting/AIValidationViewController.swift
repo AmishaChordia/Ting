@@ -10,24 +10,39 @@ import UIKit
 
 class AIValidationViewController: AIBaseViewController {
     // MARK: - Properties
- 
+    
     
     @IBOutlet weak var intentRequestLabel: UILabel!
     var intentModel : AIIntentModel!
     
     @IBOutlet weak var thumbImpressionBtn: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setViewLabelsAndProperties()
+    }
+    
+    func setViewLabelsAndProperties() {
+        
+        let validationClient = AIIntentValidationClient()
+        let intentRequestLabelString = validationClient.generateStringForIntent(intentModel)
+        
+        if intentRequestLabelString.characters.count > 0 {
+            intentRequestLabel.text = intentRequestLabelString
+        }
+        else {
+            AISpeechClient.readCurrentString(Constants.AIStrings.AIErrorString)
+            returnToDashBoardView()
+        }
+        
+    }
+    
     // MARK: - Utility methods
     
     static func createValidationVCInstance() -> AIValidationViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let validationViewController : AIValidationViewController = storyboard.instantiateViewControllerWithIdentifier("AIValidationViewController") as! AIValidationViewController
         return validationViewController
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - IBAction methods
@@ -44,6 +59,10 @@ class AIValidationViewController: AIBaseViewController {
     }
     
     @IBAction func userChangedMind(sender: UIButton) {
+        returnToDashBoardView()
+    }
+    
+    func returnToDashBoardView() {
         navigationController?.popViewControllerAnimated(true)
     }
 }

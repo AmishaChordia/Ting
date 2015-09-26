@@ -46,14 +46,25 @@ class AILoginViewController: AIBaseViewController {
     //MARK: IBAction
     
     @IBAction func loginWithTouchIdTapped(sender: UIButton) {
-        if  let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) {
-            invokeTouchIDWithUsername(savedUsername as! String)
+        if let savedUsername = NSUserDefaults.standardUserDefaults().valueForKey(Constants.touchID.kUsername) as? String{
+            
+            if  savedUsername == username.text {
+                invokeTouchIDWithUsername(savedUsername)
+            }
+            else{
+                loginTapped()
+            }
+            
         }
         else {
-            if validateLoginFields() {
-                saveUserCredentials()
-                pushToDashboard()
-            }
+            loginTapped()
+        }
+    }
+    
+    func loginTapped() {
+        if validateLoginFields() {
+            saveUserCredentials()
+            pushToDashboard()
         }
     }
     
