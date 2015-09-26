@@ -31,7 +31,6 @@ class AIValidationViewController: AIBaseViewController {
             intentRequestLabel.text = intentRequestLabelString
         }
         else {
-            AISpeechClient.readCurrentString(Constants.AIStrings.AIErrorString)
             returnToDashBoardView()
         }
         

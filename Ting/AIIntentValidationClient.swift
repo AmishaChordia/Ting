@@ -19,7 +19,6 @@ class AIIntentValidationClient: NSObject {
         if intentObj.intent == Constants.WITIntents.WITTransferMoney {
             return getStringWithEntitiesForTranferMoney(intentObj)
         }
-        
         let intentValueString = intentValues.valueForKey(intentObj.intent!) as! String
         return intentValueString
     }
@@ -27,10 +26,17 @@ class AIIntentValidationClient: NSObject {
     func getStringWithEntitiesForTranferMoney(intentObj : AIIntentModel) -> String {
         
         if let money = intentObj.entity?.money {
+            
             if let person = intentObj.entity?.contact {
                 let str = "Are you sure you want to send \(money) to \(person) ?"
                  return str
             }
+            else {
+                AISpeechClient.readCurrentString(Constants.AIStrings.AIPersonErrorString)
+            }
+        }
+        else {
+           AISpeechClient.readCurrentString(Constants.AIStrings.AIMoneyErrorString)
         }
         return ""
     }

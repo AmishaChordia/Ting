@@ -28,7 +28,10 @@ class Constants {
     }
     
     struct AIStrings {
-        static let AIErrorString : String = "Sorry!  I did not get that. Please try again!"
+        static let AIErrorString : String = "Sorry!  I did not get that. Please say that again!"
+        static let AIPersonErrorString : String = "Sorry! I did not get the person's name to trasfer your amount."
+        static let AIMoneyErrorString : String = "Sorry! I did not get the amount of money to trasfer."
+
 
     }
 
