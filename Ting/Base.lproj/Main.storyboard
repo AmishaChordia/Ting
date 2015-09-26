@@ -25,6 +25,9 @@
             <string>HelveticaNeue-Light</string>
             <string>HelveticaNeue-Thin</string>
         </mutableArray>
+        <mutableArray key="ting.ttf">
+            <string>ting</string>
+        </mutableArray>
     </customFonts>
     <scenes>
         <!--Login View Controller-->
@@ -1443,7 +1446,7 @@
                                             <constraint firstAttribute="height" constant="18" id="hhx-hj-Tj4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.19215686274509802" green="0.20000000000000001" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1462,7 +1465,8 @@
                                             <constraint firstAttribute="height" constant="114" id="FJf-36-5P2"/>
                                             <constraint firstAttribute="width" constant="87" id="VEC-mt-5dA"/>
                                         </constraints>
-                                        <state key="normal">
+                                        <fontDescription key="fontDescription" name="ting" family="ting" pointSize="70"/>
+                                        <state key="normal" title="d">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">

@@ -26,8 +26,6 @@ class AIValidationViewController: AIBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        thumbImpressionBtn.titleLabel?.font = UIFont.tingAssetsWithSize(25)
-        thumbImpressionBtn.titleLabel?.text =  "\u{d}"
         
         // Do any additional setup after loading the view.
     }
