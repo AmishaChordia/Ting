@@ -418,7 +418,14 @@
                                 </constraints>
                                 <color key="barTintColor" red="0.12941176469999999" green="0.46274509800000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Account Overview" id="LD6-0B-THw"/>
+                                    <navigationItem title="Account Overview" id="LD6-0B-THw">
+                                        <barButtonItem key="leftBarButtonItem" title="a" id="7bo-aq-yhc">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="e" id="NbM-sp-9tj">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1124,8 +1131,10 @@
                     <connections>
                         <outlet property="amountSpentMonthlyLabel" destination="TiE-5f-WqO" id="AdA-0u-wFJ"/>
                         <outlet property="lastTransactionLabel" destination="nSv-Vd-BBb" id="Rgp-rK-Vlj"/>
+                        <outlet property="leftBarBtn" destination="7bo-aq-yhc" id="Lfa-yH-R6i"/>
                         <outlet property="micInteractionView" destination="LJU-Xp-SUJ" id="5cf-Cl-SZq"/>
-                        <outlet property="navigatnBar" destination="YEw-va-954" id="O5s-O4-OL3"/>
+                        <outlet property="navigatnBar" destination="YEw-va-954" id="XE6-Fp-B3m"/>
+                        <outlet property="rightBarBtn" destination="NbM-sp-9tj" id="269-hz-7C8"/>
                         <outlet property="totalBalanceLabel" destination="Byr-LF-hVX" id="uI8-21-Umt"/>
                     </connections>
                 </viewController>
@@ -1145,28 +1154,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yU-4n-iB0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2k4-IX-0Id">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="64"/>
-                                    </constraint>
-                                </constraints>
-                                <color key="barTintColor" red="0.12941176469999999" green="0.46274509800000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem id="xBz-bR-If2"/>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2k4-IX-0Id"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2k4-IX-0Id"/>
-                                    </mask>
-                                </variation>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-PT-jzO">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -1521,6 +1508,28 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yU-4n-iB0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2k4-IX-0Id">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                </constraints>
+                                <color key="barTintColor" red="0.12941176469999999" green="0.46274509800000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Request Validation" id="xBz-bR-If2"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2k4-IX-0Id"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2k4-IX-0Id"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1543,10 +1552,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="7yU-4n-iB0"/>
                                 <exclude reference="Muw-PT-jzO"/>
                                 <exclude reference="ZH7-TH-YUd"/>
                                 <exclude reference="Iyz-2P-Zji"/>
+                                <exclude reference="7yU-4n-iB0"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="wOx-Wx-VRH"/>
@@ -1567,10 +1576,10 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="7yU-4n-iB0"/>
                                 <include reference="Muw-PT-jzO"/>
                                 <include reference="ZH7-TH-YUd"/>
                                 <include reference="Iyz-2P-Zji"/>
+                                <include reference="7yU-4n-iB0"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="wOx-Wx-VRH"/>
@@ -1593,6 +1602,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="intentRequestLabel" destination="inb-Kj-3D7" id="AKn-Vq-QJB"/>
+                        <outlet property="navigatnBar" destination="7yU-4n-iB0" id="Rxp-jN-Dbk"/>
                         <outlet property="thumbImpressionBtn" destination="hQA-4Y-q59" id="NLr-x7-95W"/>
                     </connections>
                 </viewController>

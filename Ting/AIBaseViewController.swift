@@ -9,6 +9,7 @@
 import UIKit
 
 class AIBaseViewController: UIViewController {
+    @IBOutlet weak var navigatnBar: UINavigationBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,10 @@ class AIBaseViewController: UIViewController {
     
     func setUpViewProperties() {
         view.backgroundColor = UIColor.tingBrandBlueColor()
+        if navigatnBar != nil {
+        navigatnBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.tingHelveticaRegularWithSize(18)]
+
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

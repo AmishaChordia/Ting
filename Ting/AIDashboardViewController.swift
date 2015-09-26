@@ -19,9 +19,10 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     // Outlets
     
+    @IBOutlet weak var leftBarBtn: UIBarButtonItem!
+    @IBOutlet weak var rightBarBtn: UIBarButtonItem!
     @IBOutlet weak var micInteractionView: UIView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
-    @IBOutlet weak var navigatnBar: UINavigationBar!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var amountSpentMonthlyLabel: UILabel!
     
@@ -36,10 +37,12 @@ class AIDashboardViewController: AIBaseViewController , AIIntentDelegate {
     
     func initializeProperties(){
         intentArray = NSArray(objects: Constants.WITIntents.WITBlockCard, Constants.WITIntents.WITTransferMoney,  Constants.WITIntents.WITBalance)
+        
+        leftBarBtn.setTitleTextAttributes([NSFontAttributeName : UIFont.tingAssetsWithSize(25)], forState: UIControlState.Normal)
+        rightBarBtn.setTitleTextAttributes([NSFontAttributeName : UIFont.tingAssetsWithSize(25)], forState: UIControlState.Normal)
     }
     
     func setUpView() {
-        navigatnBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.tingHelveticaRegularWithSize(16)]
         totalBalanceLabel.attributedText = createAmountString("₹ 2,40,000")
         lastTransactionLabel.attributedText = createAmountString("₹ 29,550")
         amountSpentMonthlyLabel.attributedText = createAmountString("₹ 45,000")
