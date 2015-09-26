@@ -45,8 +45,6 @@ class AIMicInteractionView: UIView , WitDelegate {
                     
                     let userIntent : AIIntentModel = AIIntentModel(dict: dataDict)
                     print(userIntent.intent)
-                    print(userIntent.entity)
-                    print(userIntent.confidence)
                     delegate?.WITUserIntentSelected(userIntent)
                 }
                 else {

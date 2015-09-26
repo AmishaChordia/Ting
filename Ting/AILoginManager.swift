@@ -11,7 +11,7 @@ import LocalAuthentication
 
 class AILoginManager: NSObject {
 
-    static func evaluateTouchIDAuthentication(completion : ((success : AnyObject? , authError : NSError?) -> Void)){
+    static func evaluateTouchIDAuthentication(completion : ((success : Bool? , authError : NSError?) -> Void)){
         let context = LAContext()
         let authenticationString = "Please authenticate your credentials."
         

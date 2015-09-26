@@ -10,6 +10,9 @@ import UIKit
 
 let intentValues : NSDictionary = [Constants.WITIntents.WITBlockCard : "Are you sure you want to block your card?",Constants.WITIntents.WITChangePIN : "Are you sure you want to change your PIN?"]
 
+
+let intentSuccessMessage : NSDictionary = [Constants.WITIntents.WITBlockCard : "Your card has been successfully blocked",Constants.WITIntents.WITChangePIN : "We will contact you soon to reset your ATM PIN!"]
+
 class AIIntentValidationClient: NSObject {
 
     
@@ -28,8 +31,10 @@ class AIIntentValidationClient: NSObject {
         if let money = intentObj.entity?.money {
             
             if let person = intentObj.entity?.contact {
+                
                 let str = "Are you sure you want to send \(money) to \(person) ?"
                  return str
+                
             }
             else {
                 AISpeechClient.readCurrentString(Constants.AIStrings.AIPersonErrorString)
@@ -39,5 +44,19 @@ class AIIntentValidationClient: NSObject {
            AISpeechClient.readCurrentString(Constants.AIStrings.AIMoneyErrorString)
         }
         return ""
+    }
+    
+    
+    func generateSuccessMessage(intentObj : AIIntentModel) -> String {
+        if intentObj.intent == Constants.WITIntents.WITTransferMoney {
+
+            if let money = intentObj.entity?.money {
+                if let person = intentObj.entity?.contact {
+                   return "You have successfully transferred \(money) to \(person)"
+                }
+            }
+        }
+        let successMessageString = intentSuccessMessage.valueForKey(intentObj.intent!) as! String
+        return successMessageString
     }
 }
