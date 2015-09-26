@@ -23,6 +23,7 @@
 		4E9B0C211BA57D03004A1627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C1F1BA57D03004A1627 /* Main.storyboard */; };
 		4E9B0C241BA57D03004A1627 /* Ting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B0C221BA57D03004A1627 /* Ting.xcdatamodeld */; };
 		4E9B0C261BA57D03004A1627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B0C251BA57D03004A1627 /* Assets.xcassets */; };
+		4EB4A0761BB6995E00FE9F83 /* ting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4A0751BB6925800FE9F83 /* ting.ttf */; };
 		4ED6E4CC1BA94D6200243997 /* AIMicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */; };
 		4ED6E4CE1BA94D7700243997 /* AIMicInteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */; };
 		4EE5A0941BAFBAFC00391C9C /* AISpeechClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */; };
@@ -51,6 +52,7 @@
 		4E9B0C231BA57D03004A1627 /* Ting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ting.xcdatamodel; sourceTree = "<group>"; };
 		4E9B0C251BA57D03004A1627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9B0C2A1BA57D03004A1627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB4A0751BB6925800FE9F83 /* ting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ting.ttf; sourceTree = "<group>"; };
 		4ED6E4CB1BA94D6200243997 /* AIMicInteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMicInteractionView.swift; sourceTree = "<group>"; };
 		4ED6E4CD1BA94D7700243997 /* AIMicInteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AIMicInteractionView.xib; sourceTree = "<group>"; };
 		4EE5A0931BAFBAFC00391C9C /* AISpeechClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AISpeechClient.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		4E8B24541BA8067F00365F6E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4A0751BB6925800FE9F83 /* ting.ttf */,
 				4EE5A0951BAFD4DE00391C9C /* thumb.png */,
 				4E8B245B1BA814EE00365F6E /* bulb.png */,
 				4E8B24591BA814E700365F6E /* logo.png */,
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB4A0761BB6995E00FE9F83 /* ting.ttf in Resources */,
 				4E8B245A1BA814E700365F6E /* logo.png in Resources */,
 				4E8B245C1BA814EE00365F6E /* bulb.png in Resources */,
 				4EE5A0961BAFD4DE00391C9C /* thumb.png in Resources */,

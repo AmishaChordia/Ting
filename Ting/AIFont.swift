@@ -21,4 +21,8 @@ extension UIFont {
     class func tingHelveticaBoldWithSize(size : CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue-Bold", size: size)!
     }
+    class func tingAssetsWithSize(size : CGFloat) -> UIFont {
+        return UIFont(name: "ting", size: size)!
+    }
+
 }
