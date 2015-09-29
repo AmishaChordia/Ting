@@ -42,9 +42,18 @@ class AIValidationViewController: AIBaseViewController, AISuccessViewDelegate {
     
     //MARK: - AISuccessView
     
+    func addOverlay() {
+        let overlay = UIView(frame: view.bounds)
+        overlay.backgroundColor = UIColor.tingBrandBlueColor()
+        overlay.alpha = 0.95
+        
+        view.addSubview(overlay)
+    }
+    
     func addSuccessView() {
+        
+        addOverlay()
         createSuccessViewInstance()
-
 
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             self.successView.frame = CGRectMake(leadingSpace, self.view.center.y - (self.successView.frame.height/2), self.view.frame.width - (2 * leadingSpace) , self.successView.frame.height)

@@ -23,12 +23,6 @@ class AISuccessView: UIView {
     }
     
     func viewPropertiesSetup() {
-        //blur view
-        let lightBlur = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
-        let blurView = UIVisualEffectView(effect: lightBlur)
-        blurView.frame = bounds
-        addSubview(blurView)
-        sendSubviewToBack(blurView)
         
         layer.borderColor = UIColor.tingDividerBlueColor().CGColor
         layer.borderWidth = 1.5
