@@ -19,15 +19,13 @@ class AIValidationViewController: AIBaseViewController, AISuccessViewDelegate {
     var intentModel : AIIntentModel!
     var successView : AISuccessView!
     
-    @IBOutlet weak var thumbImpressionBtn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewLabelsAndProperties()
     }
     
     func setViewLabelsAndProperties() {
-        
+        view.backgroundColor = UIColor.whiteColor()
         let validationClient = AIIntentValidationClient()
         let intentRequestLabelString = validationClient.generateStringForIntent(intentModel)
         
