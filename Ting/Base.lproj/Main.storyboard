@@ -865,10 +865,10 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstItem="nSv-Vd-BBb" firstAttribute="leading" secondItem="3Dy-91-8XV" secondAttribute="leading" constant="15" id="0Ck-ad-96C"/>
+                                                            <constraint firstItem="Jno-Q8-odb" firstAttribute="centerY" secondItem="3Dy-91-8XV" secondAttribute="centerY" id="3qV-aF-iI3"/>
                                                             <constraint firstItem="nSv-Vd-BBb" firstAttribute="top" secondItem="oK0-iG-5Su" secondAttribute="bottom" constant="-2" id="4CL-PT-TYn">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                                             </constraint>
-                                                            <constraint firstItem="Jno-Q8-odb" firstAttribute="centerY" secondItem="3Dy-91-8XV" secondAttribute="centerY" constant="7" id="8kK-nq-kLg"/>
                                                             <constraint firstAttribute="height" constant="44" id="B7k-vN-11e">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="67"/>
                                                             </constraint>
@@ -890,15 +890,15 @@
                                                             </mask>
                                                             <mask key="constraints">
                                                                 <exclude reference="B7k-vN-11e"/>
-                                                                <exclude reference="0Ck-ad-96C"/>
-                                                                <exclude reference="4CL-PT-TYn"/>
                                                                 <exclude reference="BQi-bN-ElD"/>
                                                                 <exclude reference="x11-OA-jRf"/>
-                                                                <exclude reference="8kK-nq-kLg"/>
-                                                                <exclude reference="Cz8-Nr-o4g"/>
+                                                                <exclude reference="0Ck-ad-96C"/>
+                                                                <exclude reference="4CL-PT-TYn"/>
                                                                 <exclude reference="KwY-jO-acj"/>
                                                                 <exclude reference="gpP-d9-i4I"/>
                                                                 <exclude reference="j13-66-0x4"/>
+                                                                <exclude reference="3qV-aF-iI3"/>
+                                                                <exclude reference="Cz8-Nr-o4g"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=compact">
@@ -910,15 +910,15 @@
                                                             </mask>
                                                             <mask key="constraints">
                                                                 <include reference="B7k-vN-11e"/>
-                                                                <include reference="0Ck-ad-96C"/>
-                                                                <include reference="4CL-PT-TYn"/>
                                                                 <include reference="BQi-bN-ElD"/>
                                                                 <include reference="x11-OA-jRf"/>
-                                                                <include reference="8kK-nq-kLg"/>
-                                                                <include reference="Cz8-Nr-o4g"/>
+                                                                <include reference="0Ck-ad-96C"/>
+                                                                <include reference="4CL-PT-TYn"/>
                                                                 <include reference="KwY-jO-acj"/>
                                                                 <include reference="gpP-d9-i4I"/>
                                                                 <include reference="j13-66-0x4"/>
+                                                                <include reference="3qV-aF-iI3"/>
+                                                                <include reference="Cz8-Nr-o4g"/>
                                                             </mask>
                                                         </variation>
                                                     </view>
@@ -1328,7 +1328,7 @@
                                         </variation>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.46274509800000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.41176470590000003" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="273" id="0vN-Ud-ios">
                                         <variation key="heightClass=regular-widthClass=compact" constant="200"/>
